@@ -25,5 +25,5 @@ ul {
   list-style-type: none;
 }
 .assignment-container input[type="checkbox"]:checked {
-  background-color: rgb(185, 218, 185) !important;
+  accent-color: rgb(185, 218, 185) !important;
 }
