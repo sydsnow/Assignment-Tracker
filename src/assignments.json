@@ -1,0 +1,6 @@
+[
+    { "id": 1, "title": "Movie App", "dueDate": "2024-02-24", "daysRemaining": 18, "percentFinished": 0, "done": false },
+    { "id": 2, "title": "Vulcan Code Challenge", "dueDate": "2024-02-24", "daysRemaining": 18, "percentFinished": 80, "done": false },
+    { "id": 3, "title": "Deck Master (.NET)", "dueDate": "2024-02-11", "daysRemaining": 5, "percentFinished": 60, "done": false },
+    { "id": 4, "title": "Sams stuff", "dueDate": "2024-02-8", "daysRemaining": 2, "percentFinished": 80, "done": false }
+]
