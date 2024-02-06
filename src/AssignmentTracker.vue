@@ -10,9 +10,6 @@ export default {
     };
   },
 
-  methods: {
-
-  },
   computed: {
     filteredAssignments() {
       return this.hideCompleted
@@ -21,16 +18,31 @@ export default {
     },
   },
 
+  methods: {
+    calculateDaysRemaining(dueDate) {
+      const today = new Date();
+      const due = new Date(dueDate);
+      const timeDiff = due.getTime() - today.getTime();
+      const daysRemaining = Math.ceil(timeDiff / (1000 * 3600 * 24)); // Convert milliseconds to days
+      return daysRemaining;
+    },
+  },
+  
   mounted() {
+    // dynamically add daysRemaining to each assignment
+    this.assignments.forEach(assignment => {
+      assignment.daysRemaining = this.calculateDaysRemaining(assignment.dueDate);
+    });
   },
 };
+
 </script>
 
 <template>
   <h1>{{ title }}</h1>
   <ul>
-    <li v-for="assignment in filteredAssignments" :key="assignment.id" id="assignment-container">
-      <input type="checkbox" v-model="assignment.done" id="input"/>
+    <li v-for="assignment in filteredAssignments" :key="assignment.id" class="assignment-container">
+      <input type="checkbox" v-model="assignment.done" name="assignment-done" class="input"/>
       <span :class="{ done: assignment.done }">
         {{ assignment.title }}
         <ul>
@@ -39,10 +51,9 @@ export default {
           <li> Percent Finished: {{ assignment.percentFinished }}%</li>
         </ul>
       </span>
-      <!-- <button @click="deleteTask(task)">X</button> -->
     </li>
   </ul>
-  <button @click="hideCompleted = !hideCompleted">
+  <button @click="hideCompleted = !hideCompleted" id="completed-button">
     {{ hideCompleted ? "Show All" : "Hide Completed" }}
   </button>
 </template>
