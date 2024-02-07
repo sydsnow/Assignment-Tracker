@@ -1,0 +1,22 @@
+Peer Review Author: Tracy
+
+Functionality of the Vue.js component (4 points)
+-> The functionality of the AssignmentTracker.vue looks great. The toggle functionality of showing/ hiding the completed assignments has been implemented
+    very nicely with the use of a button. Sydnee's method of displaying the remaining dates of an assignment is done very well and is shown correctly on 
+    the tracker. She used vue properly to render the assignment data from the JSON file to her component. She included an assignments.json file to display 
+    the details for each assignments. 4/4
+
+Effectiveness of the UI/UX  (2 points)
+-> Sydnee displayed creativeness of displaying which assignments are completed by including a green coloured checked box to her assignment tracker. I like
+    how she matched the background colour of the checked box to the 'show/hide' button. I also really like how she implemented the checked boxes to each 
+    assignment to allow users to check which assignments are completed along the way. And when the assignment has been checked, it goes to the completed
+    section which I think is very cool! 2/2
+
+Code cleanliness and organization (2 points)
+-> Sydnee removed all of the unused folders/files that were in the initial project folder. The assignments.json file looks very well organized and has all
+    of the criteria that Josh is looking for with the Assignment Tracker. The AssignmentTracker.vue file has a nicely organized with the script tags and 
+    template tags. 2/2
+
+Collaboration effort and peer review completion (2 point)
+
+Overall I give Sydnee's assignment tracker a 10/10 for having proper functionality to it and a very cute design to it! 
